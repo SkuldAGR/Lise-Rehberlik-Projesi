@@ -1,0 +1,480 @@
+/* Genel Stil */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to bottom right, #ffffff, #ffffff);
+  color: #000000;
+  transition: all 0.3s ease-in-out;
+}
+
+/* İçerik Wrapper */
+#icerik-wrapper {
+  width: 85%;
+  margin: 30px auto;
+  padding: 25px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 0.8s ease-in;
+}
+
+/* Fade-in animasyonu */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Başlıklar */
+#arama-alani h2, #form h2 {
+  text-align: center;
+  color: #797f85;
+  margin-bottom: 20px;
+}
+
+/* Label */
+label {
+  display: block;
+  margin: 10px 0 6px;
+  color: #505c68;
+  font-weight: bold;
+}
+
+/* Input, Select, Textarea */
+input[type="text"],
+input[type="number"],
+input[type="date"],
+input[type="time"],
+select,
+textarea {
+  width: 100%;
+  padding: 12px;
+  border-radius: 6px;
+  border: 1px solid #55595a;
+  background-color: #f5faff;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: #587277;
+  outline: none;
+  background-color: #e6f2ff;
+}
+
+/* Radio & Checkbox */
+input[type="radio"],
+input[type="checkbox"] {
+  margin-right: 6px;
+}
+
+/* Butonlar */
+button {
+  padding: 10px 20px;
+  font-weight: bold;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Ara Butonu */
+#ara {
+  background-color: #dbdbdb;
+  color: white;
+}
+#ara:hover {
+  background-color: #5b807e;
+}
+
+/* Form Butonları */
+.button-group {
+  text-align: center;
+}
+
+.button-group button[type="submit"] {
+  background-color: #28a745; /* Yeşil */
+  color: white;
+}
+.button-group button[type="submit"]:hover {
+  background-color: #218838;
+}
+
+.button-group button[type="reset"] {
+  background-color: #dc3545; /* Kırmızı */
+  color: white;
+}
+.button-group button[type="reset"]:hover {
+  background-color: #640700;
+}
+
+.button-group button[type="button"] {
+  background-color: #fd7e14; /* Turuncumsu */
+  color: white;
+}
+.button-group button[type="button"]:hover {
+  background-color: #e36406;
+}
+
+/* Arama Alanı ve Sonuçları */
+/* Arama Alanı ve Sonuçları */
+#arama-alani,
+#arama-sonuclari,
+#form-grup-sonuclari,
+#form {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 20px;
+  border: 1px solid #728e9e;
+}
+
+
+/* Tablo */
+#arama-sonuclari table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+#arama-sonuclari th,
+#arama-sonuclari td {
+  padding: 10px;
+  border: 1px solid #000000;
+  text-align: left;
+}
+
+#arama-sonuclari th {
+  background-color: #4e6268;
+  color: #ffffff;
+}
+
+/* Uyarı */
+#uyari {
+  font-size: 13px;
+  color: rgb(255, 0, 0);
+  text-align: center;
+  margin-top: -10px;
+  margin-bottom: 15px;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="date"],
+input[type="time"],
+select,
+textarea {
+  width: 100%;
+  padding: 12px;
+  border-radius: 6px;
+  border: 1px solid #55595a;
+  background-color: #f5faff;
+  font-size: 14px;
+  transition: 0.3s;
+  box-sizing: border-box; /* Bu satırı ekle */
+}
+
+textarea {
+  resize: none;
+}
+
+#uyari {
+  font-size: 13px;
+  color: #cc0000;
+  font-weight: bold;
+  margin-top: 4px;
+  margin-bottom: 10px;
+}
+
+
+button {
+  padding: 10px 20px;
+  font-weight: bold;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  background-color: #145f64;
+  color: white;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  margin: 7px;
+}
+
+button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+form label.akrangorusmesi {
+  display: inline-flex !important;   /* satır içi-flex konteyner */
+  flex-direction: row;               /* input önce, sonra metin */
+  align-items: center;
+  gap: 8px;                          /* aradaki boşluk */
+}
+
+.filtre-butons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.filtre-butons button {
+    padding: 12px 24px;
+    font-size: 15px;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    transform: scale(1);
+}
+
+.filtre-butons button[type="submit"] {
+    background-color: #007bff;
+    color: white;
+}
+
+.filtre-butons button[type="submit"]:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+
+/* Temizle ve Geri Dön butonları */
+.filtre-butons .temizle-btn {
+    background-color: #e74c3c;
+    color: white;
+}
+
+.filtre-butons .temizle-btn:hover {
+    background-color: #c0392b;
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+
+
+.show {
+        display: block !important;
+    }
+
+    #arama-sonuclari, #form {
+        display: none;
+    }
+
+    #uyari, #saat-uyari {
+        color: #d8000c;
+        background-color: #ffd2d2;
+        border: 1px solid #d8000c;
+        padding: 10px;
+        border-radius: 5px;
+        font-weight: bold;
+        font-size: 14px;
+        width: 100%;
+        max-width: 400px;
+        margin: 10px auto;
+        text-align: center;
+        box-shadow: 0 0 10px rgba(216, 0, 12, 0.3);
+        transition: all 0.3s ease-in-out;
+    }
+
+    /* Başlangıçta gizli */
+    #saat-uyari {
+        opacity: 0;
+        visibility: hidden; /* Başlangıçta görünmez */
+        pointer-events: none;
+        display: block; /* Display: block; ama görünmez */
+        transition: opacity 0.4s ease, visibility 0s 0.4s; /* opacity ve visibility geçişi */
+        color: #d8000c;
+        background-color: #ffd2d2;
+        border: 1px solid #d8000c;
+        padding: 10px;
+        border-radius: 5px;
+        font-weight: bold;
+        font-size: 14px;
+        width: 100%;
+        max-width: 400px;
+        margin: 10px auto;
+        text-align: center;
+        box-shadow: 0 0 10px rgba(216, 0, 12, 0.3);
+    }
+
+    /* Görünürken aktif */
+    #saat-uyari.show {
+        opacity: 1;
+        visibility: visible; /* Görünür */
+        pointer-events: auto;
+        transition: opacity 0.4s ease, visibility 0s 0s; /* opacity geçişi hemen, visibility hemen */
+    }
+
+
+/* Tablo */
+#arama-sonuclari table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+#arama-sonuclari th,
+#arama-sonuclari td {
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+#arama-sonuclari th {
+  background-color: #4e6268;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+#arama-sonuclari tr:nth-child(even) {
+  background-color: #f4f7f8;
+}
+
+#arama-sonuclari tr:hover {
+  background-color: #e1e7eb;
+  cursor: pointer;
+}
+
+/* Grup sonuçları */
+#form-grup-sonuclari table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+#form-grup-sonuclari th,
+#form-grup-sonuclari td {
+  padding: 12px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+#form-grup-sonuclari th {
+  background-color: #4e6268;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+#form-grup-sonuclari tr:nth-child(even) {
+  background-color: #f4f7f8;
+}
+
+#form-grup-sonuclari tr:hover {
+  background-color: #e1e7eb;
+  cursor: pointer;
+}
+
+/* Tablo konteynerini responsive yap */
+#arama-sonuclari,
+#form-grup-sonuclari {
+  overflow-x: auto;      /* Dar ekranda yatay scroll çıkartır */
+  -webkit-overflow-scrolling: touch; /* iOS momentum scroll */
+}
+
+/* Tabloların genişlik ayarları */
+#arama-sonuclari table,
+#form-grup-sonuclari table {
+  width: 100%;           /* Her zaman konteyner genişliği kadar */
+  max-width: 100%;       /* Taşmayı engelle */
+  border-collapse: collapse;
+  table-layout: auto;    /* Hücreye göre genişlik dağılımı */
+}
+
+/* Hücre içi taşmayı engelle ve okunabilirliği artır */
+#arama-sonuclari th,
+#arama-sonuclari td,
+#form-grup-sonuclari th,
+#form-grup-sonuclari td {
+  white-space: nowrap;   /* Metin tek satırda */
+  padding: 8px;
+}
+
+
+#form-grup-sonuclari, #bireysel-sonuclari {
+  display: none; /* Başlangıçta gizli */
+  visibility: hidden; /* Görünürlüğü sıfırla */
+  opacity: 0; /* Opaklık sıfır */
+  transition: all 0.5s ease;
+}
+
+#form-grup-sonuclari.show, #bireysel-sonuclari.show {
+  display: block;
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Arama sonuçlarındaki Grup Görüşmeleri */
+#grup-sonuclari {
+  display: none;
+  padding: 20px;
+  border: 1px solid #728e9e;
+  border-radius: 10px;
+  margin-top: 20px;
+  background: #fff;
+  overflow-x: auto;
+  transition: all 0.3s ease-in-out;
+}
+
+#grup-sonuclari.show {
+  display: block !important;
+}
+
+/* Tablo stili */
+#grup-sonuclari table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+#grup-sonuclari th,
+#grup-sonuclari td {
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: left;
+  white-space: nowrap;
+}
+
+#grup-sonuclari th {
+  background-color: #4e6268;
+  color: #fff;
+  font-weight: bold;
+}
+
+#grup-sonuclari tr:nth-child(even) {
+  background-color: #f4f7f8;
+}
+#grup-sonuclari tr:hover {
+  background-color: #e1e7eb;
+  cursor: pointer;
+}
+
+
+
+/* Mobilde font boyutunu biraz küçült */
+@media (max-width: 480px) {
+  #arama-sonuclari th,
+  #arama-sonuclari td,
+  #form-grup-sonuclari th,
+  #form-grup-sonuclari td {
+    font-size: 12px;
+    padding: 6px;
+  }
+}
+
+
+
+/* Responsive */
+@media (max-width: 768px) {
+  #icerik-wrapper {
+    width: 95%;
+  }
+
+  .button-group button {
+    width: 100%;
+    margin: 10px 0;
+  }
+}
